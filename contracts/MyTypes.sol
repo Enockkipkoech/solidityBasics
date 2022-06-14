@@ -22,5 +22,5 @@ contract MyTypes {
     address payable myContract = payable(this); /// Refers to this contract address
 
     uint256 balanceOfMyContract = myContractAddress.balance;
-    // myContract.transfer(1000);
+    myContract.transfer(1000);
 }
