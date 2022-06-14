@@ -15,6 +15,12 @@ contract MyTypes {
     int8 internal myInt8 = -128;
 
     /// wallet addresss and smart contract addresses
-    address public myAddress = 0x88f852D7DB6fd080c4fA257F755A517e9db0d124;
-    address myContractAddress = 0x88f852D7DB6fd080c4fA257F755A517e9db0d124;
+    address public myAddress =
+        address(0x88f852D7DB6fd080c4fA257F755A517e9db0d124); /// Type casting
+    address internal myContractAddress =
+        address(0x88f852D7DB6fd080c4fA257F755A517e9db0d124);
+    address payable myContract = payable(this); /// Refers to this contract address
+
+    uint256 balanceOfMyContract = myContractAddress.balance;
+    // myContract.transfer(1000);
 }
